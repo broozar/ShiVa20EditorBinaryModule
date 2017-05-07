@@ -1,0 +1,28 @@
+------------------------------------------------------------
+-- ShiVa 2.0 Editor Binary Module Loader Example script
+-- 2017-05-06 Felix Caffier
+-- www.shiva-engine.com
+------------------------------------------------------------
+
+local p, m = nil
+local s = system.getOSType ( )
+if s == system.kOSTypeWindows then
+    p, m = package.loadlib("libshivaluamodule.dll", "libinit")
+elseif s == system.kOSTypeMac then
+    p, m = package.loadlib("/absolute/path/libshivaluamodule.dylib", "libinit")
+elseif s == system.kOSTypeLinux then
+    p, m = package.loadlib("libshivaluamodule.so", "libinit")
+end
+
+log.message ( "-- Binary Module Load Start ----------------------" )
+log.message ( p )
+log.message ( m )
+log.message ( "-- Binary Module Load End ------------------------" )
+
+if p == nil then
+    log.error ( "shivaluamodule binary could not be loaded, exiting..." )
+    return
+end
+
+p() -- run libinit
+msgbox("This is a message from the editor. Line break check:\nYay! How about umlauts? äöü")

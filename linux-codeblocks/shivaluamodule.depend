@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1494068565 source:/STORAGE/shivaluamodule/main.cpp
+	"lua.hpp"
+	<stdlib.h>
+	<string>
+
+1103763184 /STORAGE/shivaluamodule/luaheaders/lua.hpp
+	"lua.h"
+	"lualib.h"
+	"lauxlib.h"
+
+1384171756 /STORAGE/shivaluamodule/luaheaders/lua.h
+	<stdarg.h>
+	<stddef.h>
+	"luaconf.h"
+
+1396299068 /STORAGE/shivaluamodule/luaheaders/luaconf.h
+	<limits.h>
+	<stddef.h>
+	<stdio.h>
+	<math.h>
+
+1365792526 /STORAGE/shivaluamodule/luaheaders/lualib.h
+	"lua.h"
+
+1365792526 /STORAGE/shivaluamodule/luaheaders/lauxlib.h
+	<stddef.h>
+	<stdio.h>
+	"lua.h"
+
